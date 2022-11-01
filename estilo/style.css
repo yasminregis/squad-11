@@ -1,0 +1,50 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+nav{
+    padding-top: 15px;
+}
+.bd2{
+    border-left: 2px solid #ccc;;
+}
+input{
+    width: 79%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+.input-corpo{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+}
+.input-nav{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+}
+.butao{
+    background: green;
+    border-radius: 4px;
+    border: 0px;
+    width: 30%;
+    padding: 5px;
+}
+hr{
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+}
