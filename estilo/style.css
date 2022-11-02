@@ -1,17 +1,51 @@
 *{
     margin: 0%;
     padding: 0%;
+    width: 100%;
 }
 nav{
     padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+.btn-nav{
+    text-decoration: none;
+    text-transform: none;
+    padding: 5px;
+}
+.btn-nav:hover{
+    background-color: whitesmoke;
+}
+.titulo{
+    font-weight: bold;
+    width: 250px;
+}
+
+.bd{
+    font-weight: bold;
 }
 .bd2{
-    border-left: 2px solid #ccc;;
+    border-left: 2px solid #ccc;
+    font-weight: bold;
 }
 input{
     width: 79%;
     border: 2px solid #ccc;
     border-radius: 4px;
+}
+.input-titulo{
+    width: 70%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+}
+input:hover{
+    background-color: whitesmoke;
 }
 .input-corpo{
     width: 100%;
@@ -23,6 +57,8 @@ input{
     background-image: url('searchicon.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
+}.input-corpo:hover{
+    background-color: whitesmoke;
 }
 .input-nav{
     width: 100%;
@@ -34,17 +70,32 @@ input{
     background-image: url('searchicon.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
+}.input-nav:hover{
+    background-color: whitesmoke;
 }
-.butao{
+.botao{
     background: green;
+    color: aliceblue;
     border-radius: 4px;
     border: 0px;
     width: 30%;
     padding: 5px;
+    font-weight: bold;
+}.botao:hover{
+    background: darkgreen;
+    width: 29%;
+    color: #ccc;
 }
-hr{
-    height:2px;
-    border-width:0;
-    color:gray;
-    background-color:gray;
+
+a{
+    text-decoration: none;
+    color: black;
+}
+@media(max-width:991px) {
+    .titulo{
+        width: 100%;
+    }
+    .input-titulo{
+        width: 100%;
+    }
 }
