@@ -61,14 +61,16 @@ input:hover{
     background-color: whitesmoke;
 }
 .input-nav{
+    padding-left: 25px;
+    margin-top: 6px;
     width: 100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-image: url('../imagens/search-icon.png') ;
+    background-position: 2px 2px;
     background-repeat: no-repeat;
 }.input-nav:hover{
     background-color: whitesmoke;
@@ -86,6 +88,7 @@ input:hover{
     width: 29%;
     color: #ccc;
 }
+
 
 a{
     text-decoration: none;
