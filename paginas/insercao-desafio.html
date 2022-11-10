@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
                             <a href="#">Edição</a>
                         </div>
                         <div class="col-4 bd btn-nav">
-                            <a href="#">Empresa</a>
+                            <a href="#"><img src="../imagens/perfil.png" alt="" class="imagem-perfil">Empresa</a>
                         </div>
                     </div>
                 </div>
@@ -50,30 +50,32 @@
                         </form>
                     </div>
                 </div>
-                <form action="" method="post">
-                    <div class="row text-start">
-                        <div class="col bd p-4">
-                            <p class="">Nome do representante:<input type="name" class="input-corpo"></p>
-                            <p class="">Representa uma empresa? Digite o nome:<input type="text" class="input-corpo"></p>
-                            <p class="">Email:<input type="email" class="input-corpo"></p>
-                            <p class="">Whatsapp:<input type="tel" class="input-corpo"></p>
-                            <p class="">Possui Discord? Digite o nome de usuário:<input type="text" class="input-corpo"></p>
-                            <p class="">Existe algum representante substituto?<input type="text" class="input-corpo"></p>
-                            <p class="">Dúvidas ou sugestões:<input type="text" class="input-corpo"></p>
-                        </div>
-                        <div class="col bd2 p-4">
-                            <p class="">Descreva o problema:</p>
-                            <textarea class="input-corpo" name="" id="" cols="30" rows="5"></textarea>
-                            <p class="">Descreva a solução esperada:</p>
-                            <textarea class="input-corpo" name="" id="" cols="30" rows="5"></textarea>
-                            <p class="">Tecnologias sugeridas:<input type="text" class="input-corpo"></p>
-                            <p class="">Materiais de referência:<input type="file" class="input-corpo"></p>
-                        </div>
-                        <div class="m-4 text-center">
-                            <input type="submit" value="Enviar" class="botao">
-                        </div>
+                <div class="row text-start">
+                    <div class="col bd p-4">
+                        <p class="">Nome do representante:<input type="name" class="input-corpo"></p>
+                        <p class="">Representa uma empresa? Digite o nome:<input type="text" class="input-corpo"></p>
+                        <p class="">Email:<input type="email" class="input-corpo"></p>
+                        <p class="">Whatsapp:<input type="tel" class="input-corpo"></p>
+                        <p class="">Possui Discord? Digite o nome de usuário:<input type="text" class="input-corpo"></p>
+                        <p class="">Existe algum representante substituto?<input type="text" class="input-corpo"></p>
+                        <p class="">Dúvidas ou sugestões:<input type="text" class="input-corpo"></p>
                     </div>
-                </form>
+                    <div class="col bd2 p-4">
+                        <p class="">
+                            Descreva o problema:
+                            <textarea class="input-corpo" name="" id="" cols="30" rows="5"></textarea>
+                        </p>
+                        <p class="">
+                            Descreva a solução esperada:
+                            <textarea class="input-corpo" name="" id="" cols="30" rows="5"></textarea>
+                        </p>
+                        <p class="">Tecnologias sugeridas:<input type="text" class="input-corpo input-tecnologias" placeholder="HTML, CSS, Javascript..."></p>
+                        <p class="">Materiais de referência:<input type="file" name="arquivos[]" multiple="multiple" class="input-corpo"></p>
+                    </div>
+                    <div class=" text-center w-100">
+                        <input type="submit" value="Enviar" class="botao">
+                    </div>
+                </div>
             </div>
         </form>
     </section>
