@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo/style.css">
+  <script src="script.js">
+  </script>
+  <title>Inserir desafio</title>
+</head>
+<body>
+  <header>
+    <img src="assets/img/onb-1.png" alt="">
+    <img src="assets/img/porto-digital-logo.png" alt="">
+    <a href="/index.html">Início</a>
+    <a href="">Programa</a>
+    <a href="">Parceiros</a>
+    <a href="">Cronograma</a>
+    <a href="">Contato</a>
+    <a href="">Blog</a>
+  </header>
+  
+  <div class="container">
+    <div class="form-image">
+        <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+    </div>
+    <div class="form">
+        <form action="#" name="desafio">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Inserir Novo Desafio</h1>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="firstname">Nome do desafio</label>
+                    <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="lastname">Nome da Empresa</label>
+                    <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="number">Celular(Whatsapp)</label>
+                    <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                </div>
+                <div class="input-box">
+                  <label for="lastname">Usuário do Discord</label>
+                  <input id="discord" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                </div>
+                <div class="input-box">
+                <label for="lastname">Representante substituto</label>
+                <input id="nameSubst" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                </div>
+            </div>
+            <div class="form-header">
+              <div class="title">
+                  <h2>Sobre o desafio</h2>
+              </div>
+            </div>
+            <div class="input-box">
+              <label for="lastname">Descreva o Problema</label>
+              <input id="describeProblem" type="text" name="lastname" placeholder="Descreva o problema" required>
+          </div>
+          <div class="input-box">
+            <label for="lastname">Descreva a solução esperada</label>
+            <input id="describeSolution" type="text" name="lastname" placeholder="Descreva a solução esperada" required>
+          </div>
+          <div class="input-box">
+            <label for="lastname">Tecnologias Sugeridas</label>
+            <input id="tecnolog" type="text" name="lastname" placeholder="Descreva a solução esperada" required>
+          </div>
+          
+            
+            </div>
+
+            <div class="continue-button">
+              <a href="http://"><input class="submit-form" type="submit" value="Continuar" onclick="enviar()"></a>
+              <input class="submit-form" type="submit" value="Carregar" onclick="carregar()">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

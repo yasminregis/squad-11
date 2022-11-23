@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo/style.css">
+  <link rel="stylesheet" href="estilo/bootstrap/css/bootstrap.css">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <script src="script.js"></script>
+  <title>Detalhes do desafio</title>
+</head>
+<body>
+  <header>
+    <img src="assets/img/onb-1.png" alt="">
+    <img src="assets/img/porto-digital-logo.png" alt="">
+    <a href="/index.html">Início</a>
+    <a href="">Programa</a>
+    <a href="">Parceiros</a>
+    <a href="">Cronograma</a>
+    <a href="">Contato</a>
+    <a href="">Blog</a>
+  </header>
+  <main>
+    <section>
+        <div class="container">
+            <div class="form-image">
+                <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+            </div>
+            <div class="m-5">
+                <div name="desafio">
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>
+                                <script>
+                                    document.write(localStorage.lastname  + " - #" + localStorage.firstname);
+                                </script>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="m-2">
+                        <h2>Sobre o desafio</h2>
+                        <div class="m-3">
+                            <div class="">
+                                <p class="p-desafio-selecionado">Descrição do problema:</p>
+                                <script>
+                                    document.write(localStorage.describeProblem);
+                                </script>
+                            </div>
+                            <div class="">
+                                <p class="p-desafio-selecionado">Solução esperada:</p>
+                                <script>
+                                    document.write(localStorage.describeSolution);
+                                </script>
+                            </div>
+                            <div>
+                                <p class="p-desafio-selecionado">Tecnologias sugeridas:</p>
+                                <script>
+                                    document.write(localStorage.tecnolog);
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-2 contato">
+                    <h2>Contato</h2>
+                    <div class="m-3 row">
+                        <div class="col">
+                            <p class="p-desafio-selecionado">Representante</p>
+                            <script>
+                                document.write(localStorage.nameSubst);
+                            </script>
+                        </div>
+                        <div class="col">
+                            <p class="p-desafio-selecionado">E-mail</p>
+                            <script>
+                                document.write(localStorage.email);
+                            </script>                        
+                        </div>
+                        <div class="col">
+                            <p class="p-desafio-selecionado">Discord</p>
+                            <script>
+                                document.write(localStorage.discord);
+                            </script>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+</body>
+</html>

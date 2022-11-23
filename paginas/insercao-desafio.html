@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../estilo/style.css">
     <title>Inserção de Desafios</title>
     <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
-    <script src="../scripts/script.js"></script>
 </head>
 <body>
     <nav class="">
@@ -41,41 +40,40 @@
         </div>
     </nav>
     <section>
-        <form action="" method="post" id="dados">
+        <form action="" method="post">
             <div class="container text-center">
                 <div class="row text-start">
                     <div class="col p-4 d-inline">
                         <form action="" method="post">
                             <h4 class="float-start d-inline titulo">NOME DO DESAFIO:</h4>
-                            <input class="float-end input-titulo input-group" type="text" id="nome-desafio">
+                            <input class="float-end input-titulo input-group" type="text">
                         </form>
                     </div>
                 </div>
                 <div class="row text-start">
                     <div class="col bd p-4">
-                        <p class="">Nome do representante:<input type="name" class="input-corpo" id="nome-representante"></p>
-                        <p class="">Representa uma empresa? Digite o nome:<input type="text" class="input-corpo" id="nome-empresa"></p>
-                        <p class="">Email:<input type="email" class="input-corpo" id="email"></p>
-                        <p class="">Whatsapp:<input type="tel" class="input-corpo" id="whatsapp"></p>
-                        <p class="">Possui Discord? Digite o nome de usuário:<input type="text" class="input-corpo" id="discord"></p>
-                        <p class="">Existe algum representante substituto?<input type="text" class="input-corpo" id="representante-substituto"></p>
-                        <p class="">Dúvidas ou sugestões:<input type="text" class="input-corpo" id="duvidas"></p>
+                        <p class="">Nome do representante:<input type="name" class="input-corpo"></p>
+                        <p class="">Representa uma empresa? Digite o nome:<input type="text" class="input-corpo"></p>
+                        <p class="">Email:<input type="email" class="input-corpo"></p>
+                        <p class="">Whatsapp:<input type="tel" class="input-corpo"></p>
+                        <p class="">Possui Discord? Digite o nome de usuário:<input type="text" class="input-corpo"></p>
+                        <p class="">Existe algum representante substituto?<input type="text" class="input-corpo"></p>
+                        <p class="">Dúvidas ou sugestões:<input type="text" class="input-corpo"></p>
                     </div>
                     <div class="col bd2 p-4">
                         <p class="">
                             Descreva o problema:
-                            <textarea class="input-corpo" name="" id="descricao-problema" cols="30" rows="5"></textarea>
+                            <textarea class="input-corpo" name="" id="" cols="30" rows="5"></textarea>
                         </p>
                         <p class="">
                             Descreva a solução esperada:
-                            <textarea class="input-corpo" name="" id="descricao-solucao" cols="30" rows="5"></textarea>
+                            <textarea class="input-corpo" name="" id="" cols="30" rows="5"></textarea>
                         </p>
-                        <p class="">Tecnologias sugeridas:<input type="text" class="input-corpo input-tecnologias" placeholder="HTML, CSS, Javascript..." id="tecnologias-sugeridas"></p>
-                        <p class="">Materiais de referência:<input type="file" class="input-corpo" id="materiais-referencia"></p>
+                        <p class="">Tecnologias sugeridas:<input type="text" class="input-corpo input-tecnologias" placeholder="HTML, CSS, Javascript..."></p>
+                        <p class="">Materiais de referência:<input type="file" name="arquivos[]" multiple="multiple" class="input-corpo"></p>
                     </div>
                     <div class=" text-center w-100">
-                        <input type="submit" value="Enviar" class="botao" onclick="enviar()">
-                        <input type="submit" value="Carregar" class="botao" onclick="carregar()">
+                        <input type="submit" value="Enviar" class="botao">
                     </div>
                 </div>
             </div>
