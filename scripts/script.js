@@ -7,8 +7,10 @@ var nameSubst;
 var describeProblem;
 var describeSolution;
 var tecnolog;
+var materiaisApoio;
 
 function enviar(){
+
     firstname = document.getElementById('firstname').value;
     lastname = document.getElementById('lastname').value;
     email = document.getElementById('email').value;
@@ -18,6 +20,7 @@ function enviar(){
     describeProblem = document.getElementById('describeProblem').value;
     describeSolution = document.getElementById('describeSolution').value;
     tecnolog = document.getElementById('tecnolog').value;
+    materiaisApoio = document.getElementById('materiaisApoio').value;
     localStorage.setItem('firstname', firstname);
     localStorage.setItem('lastname', lastname);
     localStorage.setItem('email', email);
@@ -27,6 +30,7 @@ function enviar(){
     localStorage.setItem('describeProblem', describeProblem);
     localStorage.setItem('describeSolution', describeSolution);
     localStorage.setItem('tecnolog', tecnolog);
+    localStorage.setItem('materiaisApoio', materiaisApoio);
 }
 function carregar(){
     document.getElementById('firstname').value = localStorage.firstname; 
