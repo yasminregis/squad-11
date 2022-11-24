@@ -37,9 +37,8 @@ a{
 .card{
   font-family: "Lato";
   border-radius: 5px;
-  
   padding: 20px;
-  margin:20px;
+  margin:15px 0px 15px 30px;
   width:400px;
   transition: all 0.3s ease-out;
   border-left: 3px solid #EC3A5A;
@@ -68,10 +67,8 @@ a{
   height: 100%;
   display: flex;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-  background-color: whitesmoke;
+
 }
-
-
 
 .form {
   width: 100%;
@@ -89,11 +86,10 @@ a{
   justify-content: space-between;
 }
 
-
 .form-header h1::after {
   content: '';
   display: block;
-  width: 5rem;
+
   height: 0.3rem;
   background-color:  #EC3A5A;
   margin: 0 auto;
