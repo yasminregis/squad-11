@@ -8,9 +8,9 @@ var describeProblem;
 var describeSolution;
 var tecnolog;
 var materiaisApoio;
+var download;
 
 function enviar(){
-
     firstname = document.getElementById('firstname').value;
     lastname = document.getElementById('lastname').value;
     email = document.getElementById('email').value;
@@ -32,7 +32,7 @@ function enviar(){
     localStorage.setItem('tecnolog', tecnolog);
     localStorage.setItem('materiaisApoio', materiaisApoio);
 }
-function carregar(){
+/*function carregar(){
     document.getElementById('firstname').value = localStorage.firstname; 
     document.getElementById('lastname').value = localStorage.lastname; 
     document.getElementById('email').value = localStorage.email; 
@@ -42,4 +42,5 @@ function carregar(){
     document.getElementById('describeProblem').value = localStorage.describeProblem; 
     document.getElementById('describeSolution').value = localStorage.describeSolution; 
     document.getElementById('tecnolog').value = localStorage.tecnolog; 
-}
+}*/
+
