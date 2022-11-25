@@ -10,6 +10,18 @@ var tecnolog;
 var materiaisApoio;
 var download;
 
+InputDeviceInfo.addEventListener('onchange', function(){
+    const arquivo = this.files[0];
+    const leitor = new FileReader();
+
+    leitor.addEventListener('load', function(){
+        console.log(leitor.result);
+    })
+    if(materiaisApoio){
+        leitor.readAsText(materiaisApoio);
+    }
+})
+
 function enviar(){
     firstname = document.getElementById('firstname').value;
     lastname = document.getElementById('lastname').value;
@@ -32,6 +44,20 @@ function enviar(){
     localStorage.setItem('tecnolog', tecnolog);
     localStorage.setItem('materiaisApoio', materiaisApoio);
 }
+
+function download(){
+    const a = document.createElement('a');
+    a.style = 'display: none';
+    document.body.appendChild(a);
+    return function (conteudo, nomeArquivo) {
+        const blob = new blob([conteudo], {type:'octet/stream'});
+        const url = window.URL.createObjectURL(blob);
+        a.href = url;
+        a.download = nomeArquivo;
+        a.click();
+        window.URL.revokeObjectURL(url);
+    } 
+}
 /*function carregar(){
     document.getElementById('firstname').value = localStorage.firstname; 
     document.getElementById('lastname').value = localStorage.lastname; 
@@ -44,3 +70,11 @@ function enviar(){
     document.getElementById('tecnolog').value = localStorage.tecnolog; 
 }*/
 
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        
+    }
+}

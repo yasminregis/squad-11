@@ -6,32 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../estilo/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="../estilo/style.css">
-  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
   <script src="../scripts/script.js"></script>
   <title>Detalhes do desafio</title>
 </head>
 <body>
   <header>
-    <img src="../assets/img/onb-1.png" alt="">
-    <img src="../assets/img/porto-digital-logo.png" alt="">
-    <a href="../index.html">Início</a>
-    <a href="">Programa</a>
-    <a href="">Parceiros</a>
-    <a href="">Cronograma</a>
-    <a href="">Contato</a>
-    <a href="">Blog</a>
+    <div class="row pt-1 w-100">
+        <div class="col text-center">
+            <a href="listadesafios.html"><img class="" src="../assets/img/onb-1.png" alt=""></a>
+        </div>
+        <div class="col">
+            <form>
+                <input class="input-nav search" type="text" name="search" placeholder="Search..">
+            </form>
+        </div>
+        <div class="col text-center">
+            <div class="row pt-2">
+                <div class="col-4 bd btn-nav" >
+                    <a href="listadesafios.html" class="">Desafios</a>
+                </div>
+                <div class="col-4 bd btn-nav">
+                    <a href="inserirdesafio.html" class="">Inserir desafio</a>
+                </div>
+                <div class="col-4 bd btn-nav">
+                    <a href="# " class="a-nav">Empresa</a>
+                </div>
+            </div>
+        </div>
+    </div>
   </header>
   <main>
-    <section class="w-100 text-start">
-        <div class="container form">
+    <section class="w-100 ">
+        <div class="container desafio">
             <div class="form-image">
                 <img src="../assets/img//undraw_shopping_re_3wst.svg" alt="">
             </div>
             <div class="m-5">
                 <div name="desafio">
                     <div class="form-header">
-                        <div class="title">
-                            <h1>
+                        <div class="">
+                            <h1 class="text-center">
                                 <script>
                                     document.write(localStorage.lastname  + " - #" + localStorage.firstname);
                                 </script>
@@ -39,7 +54,7 @@
                         </div>
                     </div>
                     <div class="m-2">
-                        <h2>Sobre o desafio</h2>
+                        <h2 class="desafio-line-red">Sobre o desafio</h2>
                         <div class="m-3">
                             <div class="">
                                 <p class="p-desafio-selecionado">Descrição do problema:</p>
@@ -63,7 +78,7 @@
                     </div>
                 </div>
                 <div class="m-2 contato">
-                    <h2>Contato</h2>
+                    <h2 class="desafio-line-red">Contato</h2>
                     <div class="m-3 row">
                         <div class="col">
                             <p class="p-desafio-selecionado">Representante</p>
@@ -85,6 +100,7 @@
                         </div>
                         <div class="col">
                             <p class="p-desafio-selecionado">Materiais de apoio</p>
+                            <input type="submit" onclick="download()">
                             <script>
                                 document.write(localStorage.materiaisApoio);
                             </script>                        

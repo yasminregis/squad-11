@@ -6,19 +6,27 @@ body{
   font-family: 'Roboto', sans-serif;
   width: 100%;
 }
+
 header{
   width: 100%;
   background-color:black;
   font-family: 'Roboto', sans-serif;
 }
 header img {
-  max-width: 250px;
+  width: 190px;
+  margin: 5px;
 }
-
+.btn-nav a{
+  text-align: center;
+}
+.btn-nav a:hover{
+  border-bottom: 2px solid #f4f4f4;
+  color:  #EC3A5A;
+  font-weight: 500;  
+}
 a{
   margin: 0 auto;
   text-decoration:none;
-  margin-right: 20px;
   margin-top:20px;
   color: white;
 }
@@ -35,7 +43,7 @@ a{
   justify-content: center;
 }*/
 .card{
-  font-family: "Lato";
+  font-family: "verdana";
   border-radius: 5px;
   padding: 20px;
   margin:15px 0px 15px 30px;
@@ -50,6 +58,11 @@ a{
   cursor: pointer;
   box-shadow: 7px 7px 13px 0 rgba(50,50,50,0.22);
 }
+.card h2{
+  color:#3d3d3dea;
+  font-size:26px;
+  font-weight: 550;
+}
 .card p{
   color:#a3a5ae;
   font-size:16px;
@@ -60,6 +73,28 @@ a{
 .card a:hover{
   color: black;
 }
+.input-nav{
+  padding-left: 25px;
+  margin-top: 6px;
+  width: 90%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../assets/img/search-icon.png') ;
+  background-position: 2px 2px;
+  background-repeat: no-repeat;
+}
+input:hover{
+  border: 1px solid #EC3A5A;
+}
+
+.imagem-perfil{
+  width: 25px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
 
 /*FORMULÁRIO*/
 .container {
@@ -68,6 +103,7 @@ a{
   display: flex;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
   text-align: left;
+  margin-bottom: 2%;
 }
 
 .form {
@@ -78,6 +114,16 @@ a{
   align-items: left;
   background-color: #fff;
   padding: 3rem;
+  margin-bottom: 1.5%;
+}
+.form h2{
+  color:#3d3d3dea;
+  font-weight: 550;
+}
+.form h1{
+  color:#3d3d3dea;
+  font-weight: 550;
+  margin-top: 0;
 }
 
 .form-header {
@@ -89,7 +135,6 @@ a{
 .form-header h1::after {
   content: '';
   display: block;
-
   height: 0.3rem;
   background-color:  #EC3A5A;
   margin: 0 auto;
@@ -111,20 +156,21 @@ a{
 }
 
 .input-box input {
-  margin: 0.6rem 0;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px #0000001c;
-  font-size: 0.8rem;
+  font-family: "verdana";
+  border-radius: 5px;
+  padding: 20px;
+  transition: all 0.3s ease-out;
+  border: 3px solid whitesmoke;
+  width: 100%;
 }
 
 .input-box input:hover {
   background-color: #eeeeee75;
+  border: 2px solid #EC3A5A;
 }
 
 .input-box input:focus-visible {
-  outline: 1px solid #6c63ff;
+  outline: 3px solid #6c63ff;
 }
 
 .input-box label,
@@ -136,6 +182,20 @@ a{
 
 .input-box input::placeholder {
   color: #000000be;
+}
+textarea{
+  font-family: "verdana";
+  border-radius: 5px;
+  padding: 20px;
+  transition: all 0.3s ease-out;
+  border: 3px solid whitesmoke;
+}
+textarea:focus-visible {
+  outline: 3px solid #6c63ff;
+}
+textarea:hover {
+  background-color: #eeeeee75;
+  border: 2px solid #EC3A5A;
 }
 
 .gender-group {
@@ -154,26 +214,32 @@ a{
   margin-right: 0.35rem;
 }
 
-.gender-input label {
+label {
   font-size: 0.81rem;
   font-weight: 600;
   color: #000000c0;
+  margin-bottom: 5px;
 }
 
 .submit-form{
   font-size: 0.93rem;
-  font-weight: 500;
-  width: 100%;
+  width: 50%;
   margin-top: 2.5rem;
-  padding: 5px 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   background-color: #EC3A5A;
   border-radius: 5px;
   border: none;
   color: #f4f4f4;
   cursor: pointer;
+  font-weight: 550;
 }
 .submit-form:hover{
   background-color: #c50c2e;
+  width: 48%;
+  font-weight: 500;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .contato{
   padding-bottom: 20px;
@@ -181,4 +247,27 @@ a{
 .p-desafio-selecionado{
   margin-top: 15px;
   font-weight: bold;
+}
+.desafio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: #fff;
+}
+.desafio h2{
+  color:#3d3d3dea;
+  font-weight: 550;
+}
+.desafio h1{
+  color:#3d3d3dea;
+  font-weight: 550;
+  margin-top: 0;
+}
+.desafio-line-red{
+  margin-top: 35px;
+  margin-bottom: 30px;
+  display: inline-block;
+  border-bottom: 3px solid #EC3A5A;
 }
