@@ -92,6 +92,12 @@ input:hover{
   margin-bottom: 2px;
   margin-right: 2px;
 }
+input::placeholder{
+  font-size:14px;
+  font-family: "verdana";
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+}
 
 /*FORMULÁRIO*/
 .container {
@@ -177,9 +183,6 @@ input:hover{
   color: #000000c0;
 }
 
-.input-box input::placeholder {
-  color: #000000be;
-}
 textarea{
   font-family: "verdana";
   border-radius: 5px;
