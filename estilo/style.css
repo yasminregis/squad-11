@@ -37,22 +37,14 @@ a{
     background-color: #EC3A5A;
     border-radius: 30px 30px 30px 30px;
 }
-/*.row{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
-.card{
+.card {
   font-family: "verdana";
   border-radius: 5px;
-  padding: 20px;
   margin:15px 0px 15px 30px;
   width:400px;
   transition: all 0.3s ease-out;
   border-left: 3px solid #EC3A5A;
-  /*width: 100%;*/
 }
-
 .card:hover{
   text-transform: translateY(-5px);
   cursor: pointer;
@@ -66,9 +58,14 @@ a{
 .card p{
   color:#a3a5ae;
   font-size:16px;
+  white-space: nowrap; 
+  width: 20em; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card a{
   color: black;
+  margin: 20px 10px 80px 5px;
 }
 .card a:hover{
   color: black;

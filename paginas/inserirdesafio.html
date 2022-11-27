@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../estilo/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="../estilo/style.css">
-  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">  
   <script src="../scripts/script.js">
   </script>
   <title>Inserir desafio</title>
@@ -27,17 +27,14 @@
                 <div class="col bd btn-nav" >
                     <a href="listadesafios.html" class="a-nav">Desafios</a>
                 </div>
-                <div class="col bd btn-nav">
-                    <a href="# " class="a-nav">Empresa</a>
-                </div>
+                <div class="col-4 bd btn-nav">
+                  <a href="../index.html" class="a-nav">Sair</a>
+              </div>
             </div>
         </div>
     </div>
   </header>
   <div class="container p-0">
-      <div class="form-image">
-          <img src="../assets/img//undraw_shopping_re_3wst.svg" alt="">
-      </div>
       <div class="form row">
           <form action="#" name="desafio">
               <div class="form-header">
@@ -75,9 +72,7 @@
                   <input id="nameSubst" type="text" name="substitudo" placeholder="Digite seu sobrenome" required>
                   </div>
               </div>
-              
               </div>
-
               <div class="form-header">
                 <div class="title">
                     <h2 class="desafio-line-red">Sobre o desafio</h2>
@@ -93,12 +88,8 @@
             </div>
             <div class="input-box">
               <label for="tecnolog">Tecnologias Sugeridas</label>
-              <input id="tecnolog" type="text" name="tecnolog" placeholder="Descreva a solução esperada" required>
+              <input name="tecnolog" id="tecnolog" type="text" placeholder="HTML, CSS, Javascrip" required>
             </div>
-            <!------- <div>
-              <p>Materiais de apoio</p>
-              <input id="materiaisApoio" class="" type="file" name="image[]" multiple="multiple">
-            </div>--->
           <div class="continue-button text-center">
             <a href="listadesafios.html"><input class="submit-form" type="submit" value="salvar" onclick="enviar()"></a>
           </div>

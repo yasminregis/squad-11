@@ -30,7 +30,7 @@
                     <a href="inserirdesafio.html" class="">Inserir desafio</a>
                 </div>
                 <div class="col-4 bd btn-nav">
-                    <a href="# " class="a-nav">Empresa</a>
+                    <a href="../index.html" class="a-nav">Sair</a>
                 </div>
             </div>
         </div>
@@ -39,16 +39,13 @@
   <main>
     <section class="w-100 ">
         <div class="container desafio">
-            <div class="form-image">
-                <img src="../assets/img//undraw_shopping_re_3wst.svg" alt="">
-            </div>
             <div class="m-5">
                 <div name="desafio">
                     <div class="form-header">
                         <div class="">
-                            <h1 class="text-center">
+                            <h1 class="text-center" id="titulo">
                                 <script>
-                                    document.write(localStorage.lastname  + " - #" + localStorage.firstname);
+                                    titulo();
                                 </script>
                             </h1>
                         </div>
@@ -58,21 +55,27 @@
                         <div class="m-3">
                             <div class="">
                                 <p class="p-desafio-selecionado">Descrição do problema:</p>
-                                <script>
-                                    document.write(localStorage.describeProblem);
-                                </script>
+                                <div id="problema">
+                                    <script>
+                                        problema();
+                                    </script>
+                                </div>
                             </div>
                             <div class="">
                                 <p class="p-desafio-selecionado">Solução esperada:</p>
-                                <script>
-                                    document.write(localStorage.describeSolution);
-                                </script>
+                                <div id="solucao">
+                                    <script>
+                                        solucao();
+                                    </script>
+                                </div>
                             </div>
                             <div>
                                 <p class="p-desafio-selecionado">Tecnologias sugeridas:</p>
-                                <script>
-                                    document.write(localStorage.tecnolog);
-                                </script>
+                                <div id="tecnologias">
+                                    <script>
+                                        tecnologias()
+                                    </script>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -82,28 +85,27 @@
                     <div class="m-3 row">
                         <div class="col">
                             <p class="p-desafio-selecionado">Representante</p>
-                            <script>
-                                document.write(localStorage.nameSubst);
-                            </script>
+                            <div id="Representante">
+                                <script>
+                                    representante();
+                                </script>
+                            </div>
                         </div>
                         <div class="col">
                             <p class="p-desafio-selecionado">E-mail</p>
-                            <script>
-                                document.write(localStorage.email);
-                            </script>                        
+                            <div id="Email">
+                                <script>
+                                    Email();
+                                </script>
+                            </div>                     
                         </div>
                         <div class="col">
                             <p class="p-desafio-selecionado">Discord</p>
-                            <script>
-                                document.write(localStorage.discord);
-                            </script>                        
-                        </div>
-                        <div class="col">
-                            <p class="p-desafio-selecionado">Materiais de apoio</p>
-                            <input type="submit" onclick="download()">
-                            <script>
-                                document.write(localStorage.materiaisApoio);
-                            </script>                        
+                            <div id="Discord">
+                                <script>
+                                    Discord();
+                                </script>
+                            </div>                        
                         </div>
                     </div>
                 </div>

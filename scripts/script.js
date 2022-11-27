@@ -1,3 +1,6 @@
+var cadastroDesafio = [];
+var desafioCadastrado= [];
+var idDesafio = 0;
 var firstname;
 var lastname;
 var email;
@@ -7,22 +10,15 @@ var nameSubst;
 var describeProblem;
 var describeSolution;
 var tecnolog;
-var materiaisApoio;
-var download;
+var desafioArmazenado;
 
-InputDeviceInfo.addEventListener('onchange', function(){
-    const arquivo = this.files[0];
-    const leitor = new FileReader();
-
-    leitor.addEventListener('load', function(){
-        console.log(leitor.result);
-    })
-    if(materiaisApoio){
-        leitor.readAsText(materiaisApoio);
-    }
-})
 
 function enviar(){
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'))
+        this.idDesafio = localStorage.ultimoId++;
+    }
+    this.idDesafio++;
     firstname = document.getElementById('firstname').value;
     lastname = document.getElementById('lastname').value;
     email = document.getElementById('email').value;
@@ -32,49 +28,172 @@ function enviar(){
     describeProblem = document.getElementById('describeProblem').value;
     describeSolution = document.getElementById('describeSolution').value;
     tecnolog = document.getElementById('tecnolog').value;
-    materiaisApoio = document.getElementById('materiaisApoio').value;
-    localStorage.setItem('firstname', firstname);
-    localStorage.setItem('lastname', lastname);
-    localStorage.setItem('email', email);
-    localStorage.setItem('number', number);
-    localStorage.setItem('discord', discord);
-    localStorage.setItem('nameSubst', nameSubst);
-    localStorage.setItem('describeProblem', describeProblem);
-    localStorage.setItem('describeSolution', describeSolution);
-    localStorage.setItem('tecnolog', tecnolog);
-    localStorage.setItem('materiaisApoio', materiaisApoio);
-}
-
-function download(){
-    const a = document.createElement('a');
-    a.style = 'display: none';
-    document.body.appendChild(a);
-    return function (conteudo, nomeArquivo) {
-        const blob = new blob([conteudo], {type:'octet/stream'});
-        const url = window.URL.createObjectURL(blob);
-        a.href = url;
-        a.download = nomeArquivo;
-        a.click();
-        window.URL.revokeObjectURL(url);
-    } 
-}
-/*function carregar(){
-    document.getElementById('firstname').value = localStorage.firstname; 
-    document.getElementById('lastname').value = localStorage.lastname; 
-    document.getElementById('email').value = localStorage.email; 
-    document.getElementById('number').value = localStorage.number; 
-    document.getElementById('discord').value = localStorage.discord;
-    document.getElementById('nameSubst').value = localStorage.nameSubst; 
-    document.getElementById('describeProblem').value = localStorage.describeProblem; 
-    document.getElementById('describeSolution').value = localStorage.describeSolution; 
-    document.getElementById('tecnolog').value = localStorage.tecnolog; 
-}*/
-
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
     
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
+    cadastroDesafio.push(idDesafio, firstname, lastname, email, number, discord, nameSubst, describeProblem, describeSolution, tecnolog);
+    desafioCadastrado.push(cadastroDesafio);
+    cadastroDesafio = [];
+    
+    document.getElementById('firstname').value = ''; 
+    document.getElementById('lastname').value = ''; 
+    document.getElementById('email').value = '';
+    document.getElementById('number').value = '';
+    document.getElementById('discord').value = '';
+    document.getElementById('nameSubst').value = ''; 
+    document.getElementById('describeProblem').value = ''; 
+    document.getElementById('describeSolution').value= ''; 
+    document.getElementById('tecnolog').value = ''; 
+
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+
+function show() {
+    let section = document.getElementById('section');
+    let card = document.getElementById('card');
+    section.innerHTML = '';
+    card.innerHTML = '';
+    localStorage.desafioArmazenado = '';
+
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
     }
+
+    for(var i in desafioCadastrado){
+        var a = document.createElement('a');
+        a.href="desafio-selecionado.html";
+        a.setAttribute('onclick', "armazenarDesafio("+ this.desafioCadastrado[i][0] + ")");
+        localStorage.ultimoId = i;
+
+        var div = document.createElement('div');
+        div.classList.add('card');
+        
+
+        var h2 = document.createElement('h2');
+        h2.innerHTML = desafioCadastrado[i][1];
+
+        var p = document.createElement('p');
+        p.innerHTML = desafioCadastrado[i][7];
+
+        a.append(h2,p);
+        div.append(a);
+        section.append(div);
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+
+function titulo(){
+    let titulo = document.getElementById('titulo');
+    titulo.innerHTML = '';
+    let h1 = document.createElement('h1');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if(i == localStorage.desafioArmazenado){
+            h1.innerHTML = (desafioCadastrado[i][2] + " - #" + desafioCadastrado[i][1]);
+            titulo.append(h1);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+function problema(){
+    let problema = document.getElementById('problema');
+    problema.innerHTML = '';
+    let p = document.createElement('p');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if(i == localStorage.desafioArmazenado){
+            p.innerHTML = desafioCadastrado[i][7];
+            problema.append(p);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+function solucao(){
+    let solucao = document.getElementById('solucao');
+    solucao.innerHTML = '';
+    let p2 = document.createElement('p');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if(i == localStorage.desafioArmazenado){
+            p2.innerHTML = desafioCadastrado[i][8];
+            solucao.append(p2);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+function tecnologias() {
+    let tecnologias = document.getElementById('tecnologias');
+    tecnologias.innerHTML = '';
+    let p3 = document.createElement('p');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if(i == localStorage.desafioArmazenado){
+            p3.innerHTML = desafioCadastrado[i][9];
+            tecnologias.append(p3);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+function representante() {
+    let Representante = document.getElementById('Representante');
+    Representante.innerHTML = '';
+    let p4 = document.createElement('p');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if(i == localStorage.desafioArmazenado){
+            p4.innerHTML = desafioCadastrado[i][6];
+            Representante.append(p4);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+function Email() {
+    let Email = document.getElementById('Email');
+    Email.innerHTML = '';
+    let p5 = document.createElement('p');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if(i == localStorage.desafioArmazenado){
+            p5.innerHTML = desafioCadastrado[i][3];
+            Email.append(p5);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+function Discord() {
+    let Discord = document.getElementById('Discord');
+    Discord.innerHTML = '';
+    let p6 = document.createElement('p');
+
+    if(localStorage.meuArr){
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+    }
+    for(var i in desafioCadastrado){
+        if((i) == localStorage.desafioArmazenado){
+            p6.innerHTML = desafioCadastrado[i][5];
+            Discord.append(p6);
+        }
+    }
+    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+}
+
+function armazenarDesafio(idDesafio){
+    localStorage.desafioArmazenado = idDesafio;
 }
