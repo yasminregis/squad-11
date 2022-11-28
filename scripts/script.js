@@ -12,13 +12,16 @@ var describeSolution;
 var tecnolog;
 var desafioArmazenado;
 
-
 function enviar(){
+    localStorage.ultimoId = 0;
     if(localStorage.meuArr){
-        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'))
-        this.idDesafio = localStorage.ultimoId++;
+        desafioCadastrado = JSON.parse(localStorage.getItem('meuArr'));
+        for(var i in desafioCadastrado){
+            localStorage.ultimoId = ++i;
+        }
+        this.idDesafio = localStorage.ultimoId;
     }
-    this.idDesafio++;
+    this.idDesafio = idDesafio++;
     firstname = document.getElementById('firstname').value;
     lastname = document.getElementById('lastname').value;
     email = document.getElementById('email').value;
@@ -62,7 +65,6 @@ function show() {
         var a = document.createElement('a');
         a.href="desafio-selecionado.html";
         a.setAttribute('onclick', "armazenarDesafio("+ this.desafioCadastrado[i][0] + ")");
-        localStorage.ultimoId = i;
 
         var div = document.createElement('div');
         div.classList.add('card');
@@ -77,6 +79,7 @@ function show() {
         a.append(h2,p);
         div.append(a);
         section.append(div);
+        localStorage.ultimoId = i++;
     }
     localStorage.meuArr = JSON.stringify(desafioCadastrado);
 }
@@ -98,6 +101,7 @@ function titulo(){
     }
     localStorage.meuArr = JSON.stringify(desafioCadastrado);
 }
+
 function problema(){
     let problema = document.getElementById('problema');
     problema.innerHTML = '';
