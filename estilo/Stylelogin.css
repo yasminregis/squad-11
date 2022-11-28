@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
-    font-style: oblique;
-
 }
+
 body{
     background-color: red;
+    font-family: Verdana;
 }
 header{
     background-color: black;
