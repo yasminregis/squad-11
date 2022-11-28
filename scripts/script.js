@@ -81,6 +81,7 @@ function show() {
     localStorage.meuArr = JSON.stringify(desafioCadastrado);
 }
 
+
 function titulo(){
     let titulo = document.getElementById('titulo');
     titulo.innerHTML = '';

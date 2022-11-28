@@ -20,7 +20,6 @@ header img {
   text-align: center;
 }
 .btn-nav a:hover{
-  border-bottom: 2px solid #f4f4f4;
   color:  #EC3A5A;
   font-weight: 500;  
 }
