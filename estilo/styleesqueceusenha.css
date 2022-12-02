@@ -3,11 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
-    font-style: oblique;
-
 }
 body{
     background-color: red;
+    /* background-color:#f4f4f4; */
 }
 header{
     background-color: black;
@@ -18,7 +17,6 @@ li{
 .amenu{
     color: #fff;
     text-decoration: none;
-
 }
 .navbar{
     min-height: 70px;
@@ -30,14 +28,11 @@ li{
 .logo{
     font-size: 2rem;
     font-weight: bold;
-  
 }
 .nav-menu{
     display: flex;
     align-items: center;
     gap: 60px;
-    
-
 }
 .new-link{
     transition: 0.5s ease;
@@ -68,7 +63,6 @@ button{
     background-color: red;
     color: white;
     border-color: red;
-    
 }
 
 a{
@@ -101,8 +95,9 @@ input{
     margin-right: 60px;
     background-color: white; 
     border-radius: 50px;    
+    /* border-left: 3px solid #EC3A5A;
+    border-top: 3px solid #EC3A5A; */
 }
-
 @media(max-width:768px){
     .hamburguer{
         display: block;
@@ -127,17 +122,13 @@ input{
         flex-direction: column;
         width: 25%;
         transition: 0.3s;
-
     }
     .new-link{
         margin: 35px 0;
     }
     .nav-menu.active{
         left: 0;
-
     }
-    
-
 }
 
 
