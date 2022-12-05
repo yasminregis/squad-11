@@ -202,3 +202,11 @@ function Discord() {
 function armazenarDesafio(idDesafio){
     localStorage.desafioArmazenado = idDesafio;
 }
+
+function pesquisar(show){
+    var imput,filtro,links;
+    imput = document.getElementetByName("pesquisar");
+    filtro = imput.value.toUpperCase();
+    menu = show;
+    
+}
