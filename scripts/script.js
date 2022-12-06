@@ -13,6 +13,49 @@ var tecnolog;
 var desafioArmazenado;
 var desafioCadastradoFiltrado = [];
 
+var user = [];
+var idUser;
+var userName;
+var userEmail;
+var userPassword;
+
+function cadastrar(){
+    localStorage.ultimoUser = 0;
+    if(localStorage.cadUsers){
+        usersCad = JSON.parse(localStorage.getItem('cadUsers'));
+        for(var i in usersCad){
+            localStorage.ultimoUser = ++i;
+        }
+        this.idDesafio = localStorage.ultimoUser;
+    }
+    this.idUser = idUser++;
+    userName = document.getElementById('userName').value;
+    userEmail = document.getElementById('userEmail').value;
+    userPassword = document.getElementById('userPassword').value;
+    number = document.getElementById('number').value;
+    discord = document.getElementById('discord').value;
+    nameSubst = document.getElementById('nameSubst').value;
+    describeProblem = document.getElementById('describeProblem').value;
+    describeSolution = document.getElementById('describeSolution').value;
+    tecnolog = document.getElementById('tecnolog').value;
+    
+    cadastroDesafio.push(idUser, firstname, userEmail, userPassword, number, discord, nameSubst, describeProblem, describeSolution, tecnolog);
+    usersCad.push(cadastroDesafio);
+    cadastroDesafio = [];
+    
+    document.getElementById('firstname').value = ''; 
+    document.getElementById('userEmail').value = ''; 
+    document.getElementById('userPassword').value = '';
+    document.getElementById('number').value = '';
+    document.getElementById('discord').value = '';
+    document.getElementById('nameSubst').value = ''; 
+    document.getElementById('describeProblem').value = ''; 
+    document.getElementById('describeSolution').value= ''; 
+    document.getElementById('tecnolog').value = ''; 
+
+    localStorage.cadUsers = JSON.stringify(usersCad);
+}
+
 function enviar(){
     localStorage.ultimoId = 0;
     if(localStorage.meuArr){
