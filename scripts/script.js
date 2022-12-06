@@ -11,6 +11,7 @@ var describeProblem;
 var describeSolution;
 var tecnolog;
 var desafioArmazenado;
+var desafioCadastradoFiltrado = [];
 
 function enviar(){
     localStorage.ultimoId = 0;
@@ -68,6 +69,8 @@ function show() {
 
         var div = document.createElement('div');
         div.classList.add('card');
+        div.classList.add('itemPesquisa');
+        div.classList.add(desafioCadastrado[i][1]);
         
 
         var h2 = document.createElement('h2');
@@ -81,10 +84,8 @@ function show() {
         section.append(div);
         localStorage.ultimoId = i++;
     }
-    localStorage.meuArr = JSON.stringify(desafioCadastrado);
+    localStorage.meuArr = JSON.stringify(desafioCadastrado); 
 }
-
-
 function titulo(){
     let titulo = document.getElementById('titulo');
     titulo.innerHTML = '';
@@ -203,10 +204,21 @@ function armazenarDesafio(idDesafio){
     localStorage.desafioArmazenado = idDesafio;
 }
 
-function pesquisar(show){
-    var imput,filtro,links;
-    imput = document.getElementetByName("pesquisar");
-    filtro = imput.value.toUpperCase();
-    menu = show;
+function pesquisar(){
+    let input = document.getElementsByName('search');
+    let valorPesquisa = input[0].value;    
+    desafioCadastradoFiltrado = desafioCadastrado.filter(item => item[1].includes(valorPesquisa));    
+
+    let itens = document.getElementsByClassName('itemPesquisa');
     
+    for (let index = 0; index < itens.length; index++) {        
+       const element = itens[index];
+
+       console.log("🚀 ~ file: script.js:263 ~ pesquisar ~ itens[index]", itens[index].classList)
+       if(itens[index].classList[2].includes(valorPesquisa)){
+        element.style.display="flex";
+       }else{
+        element.style.display="none";
+       }
+    }
 }
