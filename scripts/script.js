@@ -213,8 +213,7 @@ function pesquisar(){
     
     for (let index = 0; index < itens.length; index++) {        
        const element = itens[index];
-
-       console.log("🚀 ~ file: script.js:263 ~ pesquisar ~ itens[index]", itens[index].classList)
+       
        if(itens[index].classList[2].includes(valorPesquisa)){
         element.style.display="flex";
        }else{
